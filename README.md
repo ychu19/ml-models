@@ -1,10 +1,27 @@
-# Identifying Food Categories with Unsupervised ML \& NLP
+# Identifying Food Categories with NMF
 
 I've been moving all over the United States for the past few years - Urbana-Champaign in IL, Los Angeles in CA, and Charlottesville in VA. Everytime I moved to a new place, I had to search for the right places for grocery. As a person with Korean background who grew up in Taipei, exlporing which supermarkets have the most Asian food selection became a ritual for settling down in a new town. And it's never an easy task (well, not so hard in LA, but that's LA!). 
 
 In small college towns (and perhaps most of the places in the U.S.), it is difficult to find a nice Asian market. I often found myself wandering between the aisles marked "international food" or "Asian food" at a Kroger or Harris Teeter. Of course, I can never find everything I need right away, and it's time consuming to shop around all the supermarkets just to find a good jar of gochujang. I realized that I was desparate when I ordered takeouts from a Korean restuarant for dishes I can totally make by myself just to ask the owner where to find good kimchi. 
 
 All the time, labor, and the desire to find ethnic food at American supermarkets motivate this project - the goal is to rate every supermarket regarding the amount of ethnic food provided. Customers can browse through the ratings to know which supermarket to visit beforehand. The rating should be a benefitial feature for both the consumers and the supermarkets - it saves time for consumers as they no longer need to go over all the supermarkets for international food, and supermarkets with specialized products get to attract the customers who are actively looking for them. 
+
+## Table of Contents
+
+  * [Intro](#identifying-food-categories-with-nmf)
+  * [Goal of the Project](#goal-of-the-project)
+  * [Identifying Ethnic Food from UPC Barcode Data on Kaggle](#identifying-ethnic-food-from-upc-barcode-data-on-kagglehttpswwwkagglecomrtatmanuniversalproductcodedatabase)
+    + [Pre-processing the Data](#pre-processing-the-data)
+      - [Removing the nulls by excluding `len(ean)!=12`](#removing-the-nulls-by-excluding-lenean12)
+      - [Removing the nulls by excluding examples w/o names](#removing-the-nulls-by-excluding-examples-wo-names)
+      - [Removing meaningless words in the names](#removing-meaningless-words-in-the-names)
+    + [Identifying Food Items from the `upc` Data](#identifying-food-items-from-the-upc-data)
+    + [Training Set and Test Sets](#training-set-and-test-sets)
+    + [Tokenizing Names](#tokenizing-names)
+    + [Non-Negative Matrix Factorization (NMF)](#non-negative-matrix-factorization-nmf)
+  * [Predicting Food Categories in Test Sets](#predicting-food-categories-in-test-sets)
+  * [Conclusion](#conclusion)
+  * [Next Steps](#next-steps)
 
 ## Goal of the Project
 
@@ -213,8 +230,7 @@ Among the three hypothetical supermarkets, I would choose to visit the second on
 
 ## Conclusion
 
-The ultimate goal for this project is to create 
-This document records the first step 
+The ultimate goal for this project is to create show the proportion of different ethnic food (like Korean, Chinese, Mexican, etc.) each grocery store has for consumers to decide where to shop. This document records the first stage of the project - identifying ethnic food among all the other product items. 
 
 ## Next Steps
-
+- Figure out a better way to classify food items. The nmf topic modeling adopted here doesn't really produce meaningful topics vis-a-vis countries of origin of the food items. 
