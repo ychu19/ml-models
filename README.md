@@ -10,7 +10,7 @@ All the time, labor, and the desire to find ethnic food at American supermarkets
 
   * [Intro](#identifying-food-categories-with-nmf)
   * [Goal of the Project](#goal-of-the-project)
-  * [Identifying Ethnic Food from UPC Barcode Data on Kaggle](#identifying-ethnic-food-from-upc-barcode-data-on-kagglehttpswwwkagglecomrtatmanuniversalproductcodedatabase)
+  * [Identifying Ethnic Food from UPC Barcode Data on Kaggle](#identifying-ethnic-food-from-upc-barcode-data-on-kaggle)
     + [Pre-processing the Data](#pre-processing-the-data)
       - [Removing the nulls by excluding `len(ean)!=12`](#removing-the-nulls-by-excluding-lenean12)
       - [Removing the nulls by excluding examples w/o names](#removing-the-nulls-by-excluding-examples-wo-names)
