@@ -7,6 +7,18 @@ Using grocery item data from scraping webpages at H Mart and Walmart, I built a 
 
 ## Table of Contents
 
+  * [Motivation](#motivation)
+  * [Goal of the Project: Identifying East Asian Food Items](#goal-of-the-project-identifying-east-asian-food-items)
+  * [Building a Logistic Regression Model](#building-a-logistic-regression-model)
+    + [Scraping Items from H Mart for East Asian Food with `BeautifulSoup`](#scraping-items-from-h-mart-for-east-asian-food-with-beautifulsoup)
+    + [Scraping Items from Walmart for Non-East Asian Food with `selenium`](#scraping-items-from-walmart-for-non-east-asian-food-with-selenium)
+    + [Pre-processing the data](#pre-processing-the-data)
+    + [Building the Model](#building-the-model)
+  * [Use the Model to Categorize East Asian Items at Wegmans and Harris Teeter](#use-the-model-to-categorize-east-asian-items-at-wegmans-and-harris-teeter)
+    + [Wegmans](#wegmans)
+    + [Harris Teeter](#harris-teeter)
+  * [Conclusion: So Which One Should I Visit First. Wegmans or Harris Teeter?](#so-which-one-should-i-visit-first-wegmans-or-harris-teeter)
+
 ## Motivation
 
 I've been moving all over the United States for the past few years - Urbana-Champaign in IL, Charlottesville in VA, etc. Everytime I moved to a new place, I had to search for the right places for grocery. As a person with Korean background who grew up in Taipei, exlporing which supermarkets have the most East Asian food selection became a ritual for settling down in a new town. And it's never an easy task. 
